@@ -46,7 +46,7 @@ public class RacingCar {
 		Integer maxValue = Collections.max(car.values());
 		List<String> list = car.entrySet()
 			.stream()
-			.filter(entry -> entry.getValue() == maxValue)
+			.filter(entry -> entry.getValue().equals(maxValue))
 			.map(Entry::getKey)
 			.collect(Collectors.toList());
 		System.out.printf("%s가 최종 우승했습니다.", list.toString().replaceAll("\\[|\\]", ""));
