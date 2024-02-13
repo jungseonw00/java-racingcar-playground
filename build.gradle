@@ -5,13 +5,24 @@ group = 'camp.nextstep'
 version = '1.0.0'
 sourceCompatibility = '1.8'
 
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
 repositories {
 	mavenCentral()
 }
 
 dependencies {
-    testImplementation "org.junit.jupiter:junit-jupiter:5.7.2"
-    testImplementation "org.assertj:assertj-core:3.19.0"
+    compileOnly "org.projectlombok:lombok:1.18.28"
+    annotationProcessor "org.projectlombok:lombok:1.18.28"
+    testImplementation "org.junit.jupiter:junit-jupiter:5.10.0"
+    testImplementation "org.assertj:assertj-core:3.24.2"
+    //test 롬복 사용
+    testCompileOnly "org.projectlombok:lombok:1.18.28"
+    testAnnotationProcessor "org.projectlombok:lombok:1.18.28"
 }
 
 test {
