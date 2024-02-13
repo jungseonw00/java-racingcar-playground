@@ -22,7 +22,7 @@ public class RacingCar {
 		}
 
 		for (int i = 0; i < tokens.length; i++) {
-			car.put(tokens[i], 0);
+			car.put(tokens[i] + " : ", 0);
 		}
 
 		return true;
